@@ -32,12 +32,12 @@ musicas = [
 ]
 
 
-@playlist.route('/')
+@playlist.route('/musicas')
 def obter_musicas():
     return jsonify(musicas)
 
 
-@playlist.route('/<int:indice>', methods=['GET'])
+@playlist.route('/musicas/<int:indice>', methods=['GET'])
 def obter_musicas_por_id(indice):
     try:
         if musicas[indice] is not None:
